@@ -15,7 +15,8 @@ module.exports = class API{
         
         try {
             const prd = await Products.find();
-            res.status(200).json(prd);
+            res.send(prd);
+            //res.status(200).json(prd);
         } catch (error) {
             res.status(404).json({message: error.message});
         }
